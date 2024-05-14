@@ -1,5 +1,5 @@
 import React from "react";
-
+//Toggle dark mode
 function Header({ isDarkMode, onDarkModeClick }) {
   return (
     <header>

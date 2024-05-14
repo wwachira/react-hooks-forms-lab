@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import ItemForm from "./ItemForm";
 import Filter from "./Filter";
 import Item from "./Item";
-
+//destructuring { item}, turn the object to a parameter 
 function ShoppingList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  //filter logic to init the process
   function handleCategoryChange(event) {
     setSelectedCategory(event.target.value);
   }
@@ -18,7 +19,7 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
-      <ItemForm />
+      <ItemForm /> 
       <Filter onCategoryChange={handleCategoryChange} />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
